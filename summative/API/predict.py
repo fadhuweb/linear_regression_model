@@ -2,9 +2,9 @@ import joblib
 import pandas as pd
 
 # Load model, scaler, and feature column names
-model = joblib.load(r'C:\Users\fadhl\OneDrive\Desktop\linear_regression_model\summative\linear_regression\best_model.pkl')
-scaler = joblib.load(r'C:\Users\fadhl\OneDrive\Desktop\linear_regression_model\summative\linear_regression\scaler.pkl')
-feature_columns = joblib.load(r'C:\Users\fadhl\OneDrive\Desktop\linear_regression_model\summative\linear_regression\feature_columns.pkl')
+model = joblib.load('best_model.pkl')
+scaler = joblib.load('scaler.pkl')
+feature_columns = joblib.load('feature_columns.pkl')
 
 def predict_grade(input_data: dict) -> float:
     input_df = pd.DataFrame([input_data])
