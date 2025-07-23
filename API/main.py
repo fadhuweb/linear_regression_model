@@ -1,12 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import YieldInput  # ✅ Import from your schema
-from predict import predict_yield  # ✅ Import the prediction logic
+from schemas import ProductInput  # ✅ Reuse the schema if inputs are the same
+from predict import predict_production  # ✅ Updated function name
 import traceback
 
-app = FastAPI(title="Crop Yield Predictor")
+app = FastAPI(title="Crop Production Predictor")
 
-# CORS (for testing from frontend or Postman)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -16,11 +16,11 @@ app.add_middleware(
 )
 
 @app.post("/predict")
-def predict(payload: YieldInput):
+def predict(payload: ProductInput):
     try:
         input_dict = payload.dict()
-        prediction = predict_yield(input_dict)
-        return {"predicted_yield": round(prediction, 2)}
+        prediction = predict_production(input_dict)
+        return {"predicted_production": round(prediction, 2)}
     except ValueError as ve:
         raise HTTPException(status_code=400, detail=str(ve))
     except Exception as e:
