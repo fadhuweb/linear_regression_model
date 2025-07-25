@@ -79,9 +79,8 @@ _(Max 5 minutes)_
 ## 📦 Technologies Used
 
 - Python (FastAPI)
-- Scikit-learn (Linear Regression Model)
+- Scikit-learn (Model training)
 - Flutter (Frontend)
-- Firebase (Optional, for future enhancement)
 - Hosted on: Render + GitHub Pages
 
 ---
