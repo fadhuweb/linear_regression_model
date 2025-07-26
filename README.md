@@ -71,9 +71,7 @@ A cross-platform Flutter app was built to serve as a user-friendly frontend for 
 
 ## ▶️ Video Demo
 
-**📹 [Watch Demo on YouTube](https://youtu.be/your-demo-video-link)**  
-_(Max 5 minutes)_
-
+https://drive.google.com/file/d/1hWo2lzUCKUAbWPolhOMdZJQpHzcDZj8P/view?usp=sharing
 ---
 
 ## 📦 Technologies Used
